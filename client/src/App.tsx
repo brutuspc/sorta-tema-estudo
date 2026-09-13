@@ -12,8 +12,8 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
+      {/* Also render Home for direct single-file openings, whose file path is not "/". */}
+      <Route component={Home} />
     </Switch>
   );
 }
